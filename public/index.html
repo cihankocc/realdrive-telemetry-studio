@@ -18,7 +18,7 @@
           MoTeC i2 Pro &amp; CSV Yarış Telemetri Yükleme, Tur Karşılaştırma ve 2B Pist Isı Haritası Paneli
         </p>
       </div>
-      <div class="status-pill" id="header-status">Sistem Hazır</div>
+      <div class="status-pill" id="header-status">Yükleniyor...</div>
     </div>
   </header>
 
@@ -51,14 +51,41 @@
       <div class="error-banner hidden" id="error-banner" style="margin-top: 14px;" role="alert"></div>
     </section>
 
-    <section class="card" id="analysis-mount">
+    <section class="card" id="session-summary-section">
       <div class="card-header">
         <div>
-          <h2 class="card-title">2. Oturum Özeti</h2>
-          <p class="card-subtitle">Analiz bileşenleri yükleniyor...</p>
+          <h2 class="card-title">2. Oturum Meta Bilgisi ve Özet Performans KPI Kartları</h2>
+          <p class="card-subtitle">
+            Yüklenen kaydın pist, araç ve sürüş dinamikleri özeti
+          </p>
         </div>
       </div>
+
+      <div class="meta-strip" id="meta-strip"></div>
+      <div class="kpi-grid" id="kpi-grid" style="margin-top: 16px;"></div>
     </section>
+
+    <section class="card" id="chart-section">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title">3. Etkileşimli Çok Kanallı Telemetri Grafiği</h2>
+          <p class="card-subtitle">
+            Kanalları açıp kapatın ve fareyi grafik üzerinde gezdirerek anlık telemetri değerlerini okuyun
+          </p>
+        </div>
+        <div class="channel-toggles" id="channel-toggles"></div>
+      </div>
+
+      <div class="canvas-frame">
+        <canvas class="chart-canvas" id="telemetry-chart"></canvas>
+      </div>
+
+      <div class="cursor-readout" id="chart-cursor-readout">
+        <span>İmleci grafik üzerine getirerek anlık verileri inceleyin.</span>
+      </div>
+    </section>
+
+    <div id="feature2-mount"></div>
   </main>
 
   <footer class="footer">
