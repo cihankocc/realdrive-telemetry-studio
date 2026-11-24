@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealDrive Telemetry Studio — 20 Hz Yarış Telemetri ve Tur Analizi</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-group">
+        <h1 class="brand-title">
+          REALDRIVE TELEMETRY STUDIO
+          <span class="brand-badge">20 HZ ANALİZ</span>
+        </h1>
+        <p class="brand-subtitle">
+          MoTeC i2 Pro &amp; CSV Yarış Telemetri Yükleme, Tur Karşılaştırma ve 2B Pist Isı Haritası Paneli
+        </p>
+      </div>
+      <div class="status-pill" id="header-status">Sistem Hazır</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title">1. Telemetri Oturumu Yükle</h2>
+          <p class="card-subtitle">
+            20 Hz MoTeC CSV veya ham çok kanallı CSV dosyanızı sürükleyip bırakın ya da hazır örnek oturumlardan birini inceleyin.
+          </p>
+        </div>
+      </div>
+
+      <div class="dropzone" id="dropzone">
+        <div class="dropzone-info">
+          <div class="dropzone-title">CSV Dosyası Seçin veya Buraya Bırakın</div>
+          <div class="dropzone-hint">Desteklenen formatlar: 55 kanallı MoTeC CSV, ham 55 kanallı veya 27 kanallı yarış telemetrisi</div>
+        </div>
+        <div class="uploader-actions">
+          <label class="btn btn-gold file-label" for="csv-file-input">
+            Dosya Seç (.csv)
+          </label>
+          <input class="file-input-hidden" id="csv-file-input" type="file" accept=".csv,.txt" />
+          <button class="btn active" id="btn-sample-tech" type="button">Örnek: Teknik Pist (3 Tur)</button>
+          <button class="btn" id="btn-sample-city" type="button">Örnek: Şehir Devresi (1 Tur)</button>
+        </div>
+      </div>
+
+      <div class="error-banner hidden" id="error-banner" style="margin-top: 14px;" role="alert"></div>
+    </section>
+
+    <section class="card" id="analysis-mount">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title">2. Oturum Özeti</h2>
+          <p class="card-subtitle">Analiz bileşenleri yükleniyor...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>RealDrive Telemetry Studio &middot; 20 Hz Motorsport Veri Analiz Aracı</span>
+    <span>Sıfır Harici Bağımlılık &middot; HTML5 Canvas &amp; ES Modules</span>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

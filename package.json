@@ -1,0 +1,19 @@
+{
+  "name": "realdrive-telemetry-studio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "20 Hz CSV / MoTeC Yarış Telemetri ve Tur Analiz Web Paneli",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "telemetry",
+    "motorsport",
+    "motec",
+    "csv",
+    "lap-analysis",
+    "heatmap"
+  ],
+  "license": "MIT"
+}
